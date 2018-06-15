@@ -1,0 +1,22 @@
+<p>
+  <!--This is what I'm all about. -->
+  <a [routerLink]="" (click)="sendMeHome()"><strong>Take me back</strong></a>
+</p>
+
+<!--<ul>-->
+<!--<li *ngFor='let goal of goals'>-->
+<!--{{ goal }}-->
+<!--</li>-->
+<!--</ul>-->
+<br>
+
+<div class="container color-light" [@goals]="goals.length">
+  <div class="col">
+    <!--ввыводим список целей (goals)-->
+    <p class="life-container" *ngFor="let goal of goals">
+      {{ goal }}
+    </p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
